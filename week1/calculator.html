@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+  <input id= "day">
+<div id= "p"></div>
+
+
+<button class= "one">+</button>
+<button class= "two">-</button>
+<button class= "three">x</button>
+<button class= "four">/</button>
+
+  <input id= "night" class = "two">
+<div id= "p"></div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <script>
+  let a;
+  let b;
+  let sum;
+ $(".one").click(()=>{
+
+//
+let a = parseInt($("#day").val());
+
+let b = parseInt($("#night").val());
+
+let sum = (a + b);
+
+console.log(sum)
+
+ });
+ $(".two").click(()=>{
+let a = parseInt($("#day").val());
+
+let b = parseInt($("#night").val());
+
+let sub = (a - b);
+
+console.log(sub)
+
+ });
+
+ $(".three").click(()=>{
+let a = parseInt($("#day").val());
+
+let b = parseInt($("#night").val());
+
+let mult = (a * b);
+
+console.log(mult)
+
+ });
+
+ $(".four").click(()=>{
+let a = parseInt($("#day").val());
+
+let b = parseInt($("#night").val());
+
+let div = (a / b);
+
+console.log(div)
+
+ });
+  </script>
+</body>
+</html>

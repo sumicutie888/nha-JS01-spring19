@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <h1>Guess how my day was?</h1>
+  <input type="text" id="day">
+  <p></p>
+  <button> Guess </button>
+  <script>
+
+    let a = "fun";
+    let b;
+    $("button").click(() => {
+      let b = ($("#day").val());
+      console.log(b);
+
+      if (b==a) {
+        $("p").append(a);
+      } else {
+        console.log("not a match");
+      }
+    });
+
+  </script>
+</body>

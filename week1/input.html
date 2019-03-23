@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <input id= "name" class = "hi">
+<div id= "p"></div>
+  <button class= "bye">Generate</button>
+  <script>
+
+
+ $(".bye").click(()=>{
+
+let x = $("#name").val();
+$("#p").text(x);
+ });
+  </script>
+</body>
+</html>

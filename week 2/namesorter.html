@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Bowlby+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dekko" rel="stylesheet">
+  <link rel="stylesheet" href="namesorter.css">
+</head>
+
+<body>
+  <!--Title-->
+  <u><h1>NAME SORTER:</h1></u>
+  <h4>By: Sumayia Moore<h4>
+  <!--Create an input field-->
+  <input type="text" placeholder="First name">
+  <!--Create a "post" button. When this button is clicked, it saves the input value and appends it into the webpage-->
+  <button id="post">Post</button>
+  <!--Create a "sort" button. This will take all the names that have been appended, sort them alphabetically, and split them into 3 lists-->
+  <button id="sort">Sort</button>
+
+  <p></p>
+
+  <div id="af">
+    <h3>A-F</h3>
+    <!--Array items A-F will print here-->
+  </div>
+
+  <div id="gm">
+    <h3>G-M</h3>
+    <!--Array items G-M will print here-->
+  </div>
+
+  <div id="nz">
+    <h3>N-Z</h3>
+    <!--Array items N-Z will print here-->
+  </div>
+
+  <script>
+    //Create the array of names
+    let namesList = [];
+    //Create variable to store each name that is entered into input
+    let newName;
+    //When the "post" button is clicked, call this function
+    $("#post").click(() => {
+      //Save the value of the user's input to newName
+      let newName = ($("input").val());
+      //Add the new name to the namesList array
+      namesList.push(newName);
+      //Print the new name onto the webpage
+      $("p").append(newName + "<br>");
+      $("input").val("");
+    });
+
+    //Create a loop that will check the first letter of each name in the array
+    $("#sort").click(() => {
+      //Use .charAt(0) method to check first character in each array item
+      for (i = 0; i < namesList.length; i++) {
+        let selectedName = namesList[i];
+        if (
+          selectedName.charAt(0) == "A" ||
+          selectedName.charAt(0) == "B" ||
+          selectedName.charAt(0) == "C" ||
+          selectedName.charAt(0) == "D" ||
+          selectedName.charAt(0) == "E" ||
+          selectedName.charAt(0) == "F"
+        ) {
+          $("#af").append(selectedName + "<br>");
+        } else if (
+          selectedName.charAt(0) == "G" ||
+          selectedName.charAt(0) == "H" ||
+          selectedName.charAt(0) == "I" ||
+          selectedName.charAt(0) == "J" ||
+          selectedName.charAt(0) == "K" ||
+          selectedName.charAt(0) == "L" ||
+          selectedName.charAt(0) == "M"
+        ) {
+          $("#gm").append(selectedName + "<br>");
+        } else if (
+          selectedName.charAt(0) == "N" ||
+          selectedName.charAt(0) == "O" ||
+          selectedName.charAt(0) == "P" ||
+          selectedName.charAt(0) == "Q" ||
+          selectedName.charAt(0) == "R" ||
+          selectedName.charAt(0) == "S" ||
+          selectedName.charAt(0) == "T" ||
+          selectedName.charAt(0) == "U" ||
+          selectedName.charAt(0) == "V" ||
+          selectedName.charAt(0) == "W" ||
+          selectedName.charAt(0) == "X" ||
+          selectedName.charAt(0) == "Y" ||
+          selectedName.charAt(0) == "Z"
+        ) {
+          $("#nz").append(selectedName + "<br>");
+        };
+      };
+    });
+  </script>
+</body>
+
+</html>
